@@ -12,8 +12,10 @@
     {%for pastel in pasteles %}
 
     <li> {{ pastel.name  }}
-          <a href="{% url 'update-page' pk=product.id%}">edit</a>
-    <a>delete</a></li>
+          <a href="{% url 'product-page' pk=pastel.id%}"> view</a>
+          <a href="{% url 'update-page' pk=pastel.id%}">edit</a>
+         <a href="{% url 'delete-page' pk=pastel.id%}">delete</a>
+    
      {{ pastel.description  }}
 
     {% endfor %}
